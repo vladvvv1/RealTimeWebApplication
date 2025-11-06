@@ -2,7 +2,6 @@ import { createAdapter } from "@socket.io/redis-adapter";
 import mongoose from "mongoose";
 
 const UserSchema = new mongoose.Schema({
-    _id,
     username: {
         type: String,
         required: true,

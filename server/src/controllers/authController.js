@@ -40,6 +40,7 @@ export const Registration = async (req, res) => {
 export const Login = async (req, res) => {
     const { username, password } = req.body;
 
+
     if (!username || !password) {
         return res.status(401).json({ error: "No username or password provided." });
     }
@@ -71,7 +72,7 @@ export const Login = async (req, res) => {
     }
 }
 
-export const refreshSession = async (req, res) => {
+export const RefreshSession = async (req, res) => {
     const { token } = req.body;
 
     if (!token || !refreshTokens.includes(token)) {
@@ -87,3 +88,12 @@ export const refreshSession = async (req, res) => {
     }
 };
 
+// export const protected = (req, res) => {
+
+// }
+
+// export const logout = (req, res) => {
+//     const { token } = req.body;
+//     refreshSession = refreshTokens.filter((t) => t !== token);
+//     res.json({ message: "Logged out successfully." })
+// }

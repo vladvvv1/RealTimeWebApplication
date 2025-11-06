@@ -1,7 +1,6 @@
 import mongoose from "mongoose";
 
 const roomSchema = new mongoose.Schema({
-    _id,
     username: {
         type: String,
         required: true,

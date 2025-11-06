@@ -1,16 +1,18 @@
 import express from 'express';
 import cors from 'cors';
 import helmet from 'helmet';
-import { authRoutes } from "./routes/auth.js"
-
+import authRoutes from "./routes/auth.js"
+import bodyParser from 'body-parser';
 
 export const app = express();
 
 app.use(cors());
 app.use(helmet());
 app.use(express.json());
+app.use(bodyParser.urlencoded({ extended: true }))
+app.use(bodyParser.json())
 
-app.use('/auth', authRoutes);
+app.use('/api/auth', authRoutes);
 
 app.get('/', (req, res) => {
   res.json({ message: 'Chat backend API running ✅' });
