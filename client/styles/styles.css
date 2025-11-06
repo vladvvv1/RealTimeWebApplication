@@ -1,0 +1,84 @@
+:root {
+  --white: #f8f9fa;
+  --red: #ae2012;
+  --dark-red: #7c0d03;
+  --black: #212529;
+}
+body {
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(#f3904f, #3b4371);
+}
+
+.auth-window {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: white;
+  min-width: 320px;
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+.auth-window h2 {
+  margin-top: 40px;
+}
+form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+form * {
+  border-radius: 15px;
+  margin-top: 15px;
+  min-width: 200px;
+  padding: 10px;
+  font-size: 14px;
+}
+input:first-of-type {
+  margin-top: 0;
+}
+input[type="submit"] {
+  color: var(--white);
+  background-color: var(--red);
+  border: none;
+}
+input[type="submit"]:hover {
+  cursor: pointer;
+  background-color: var(--dark-red);
+}
+.forgot-div {
+  padding: 0;
+  margin: 0;
+  text-align: right;
+}
+.forgot-passwd {
+  display: inline;
+  color: var(--black);
+  text-decoration: none;
+  font-size: 12px;
+  padding: 5px;
+  margin: 0;
+}
+.forgot-passwd:hover {
+  text-decoration: underline;
+  color: var(--dark-red);
+}
+
+.no-account {
+  margin-top: 10px;
+}
+
+.no-account * {
+  display: inline-block;
+}
+.no-account a:hover {
+  color: var(--dark-red);
+}
+.no-account a:visited {
+  color: var(--red);
+}
