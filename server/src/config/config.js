@@ -8,6 +8,9 @@ export const PORT = process.env.PORT;
 export const MONGO_URL = process.env.MONGO_URL;
 export const JWT_SECRET = process.env.JWT_SECRET;
 export const JWT_REFRESH_SECRET = process.env.JWT_REFRESH_SECRET;
+export const JWT_REFRESH_SECRET = process.env.JWT_REFRESH_SECRET;
+export const JWT_EXPIRATION = process.env.JWT_EXPIRATION;
+export const JWT_REFRESH_EXPIRATION = process.env.JWT_REFRESH_EXPIRATION;
 export const REDIS_URL = process.env.REDIS_URL;
 export const logDirectory = process.env.LOG_DIR;
 
